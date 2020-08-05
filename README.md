@@ -28,7 +28,9 @@
 
 ## :warning: 注意
 
-1. `NULL`
+1. `LTDC 时钟请参照下图设定`
+
+![LTDC_CLK][LTDC_CLK]
 
 ## :gear: 硬件 & 软件 需求
 
@@ -54,5 +56,6 @@
 ![运行截图][运行截图]
 
 [引脚分配]: ./PinOut.jpg
+[LTDC_CLK]: ./LTDC_CLK.jpg
 [仿真截图]: ./Pic_Simulation.jpg
 [运行截图]: ./Pic_RunOnTarget.jpg

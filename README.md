@@ -22,6 +22,8 @@
 
 移植到安富莱 STM32-V6 开发板 `STM32F429BIT6` 的 `TouchGFX` 工程。
 
+![串口终端输出信息][串口终端输出信息]
+
 ## :pushpin: 引脚分配图
 
 ![引脚分配][引脚分配]
@@ -41,15 +43,17 @@
 
 ### 软件需求
 
+![开发环境][开发环境]
+
 - STM32CubeIDE 1.4.1
 - STM32CubeMX 6.0.0
 - TouchGFX 4.14.0
 
 ### 效果
 
-#### PC 仿真效果
+<!-- #### PC 仿真效果 -->
 
-![仿真截图][仿真截图]
+<!-- ![仿真截图][仿真截图] -->
 
 #### 单片机实际运行效果
 
@@ -59,3 +63,5 @@
 [LTDC_CLK]: ./LTDC_CLK.jpg
 [仿真截图]: ./Pic_Simulation.jpg
 [运行截图]: ./Pic_RunOnTarget.jpg
+[串口终端输出信息]: ./TerminalInfo.jpg
+[开发环境]: ./DevEnv.jpg

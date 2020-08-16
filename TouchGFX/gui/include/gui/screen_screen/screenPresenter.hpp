@@ -27,6 +27,8 @@ public:
 
     virtual ~screenPresenter() {};
 
+    void EG_ChangeScreen(uint8_t key);
+
 private:
     screenPresenter();
 

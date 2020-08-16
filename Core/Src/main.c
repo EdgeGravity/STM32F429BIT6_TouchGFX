@@ -63,13 +63,7 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-//setFrameBufferStartAddresses((void*)0xC0000000, (void*)0, (void*)0xC00BB800);
-//setFrameBufferStartAddresses((void*)0xC0000000, (void*)0xC00BB800, (void*)0xC0177000);
-
 /* FMC SDRAM Bank address */
-#define SDRAM_BANK_ADDR     ((uint32_t)0xC0000000)
-
 #define SDRAM_TIMEOUT ((uint32_t)0xFFFF)
 #define REFRESH_COUNT (1385)
 
@@ -181,6 +175,7 @@ int main(void)
   MX_TIM5_Init();
   MX_USART1_UART_Init();
   MX_CRC_Init();
+  MX_TIM7_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   MX_SDRAM_InitEx();

@@ -2,6 +2,7 @@
 #define MODELLISTENER_HPP
 
 #include <gui/model/Model.hpp>
+#include "EG_Include.h"
 
 class ModelListener
 {
@@ -14,6 +15,8 @@ public:
     {
         model = m;
     }
+
+    virtual void EG_ChangeScreen(uint8_t key) {}
 protected:
     Model* model;
 };

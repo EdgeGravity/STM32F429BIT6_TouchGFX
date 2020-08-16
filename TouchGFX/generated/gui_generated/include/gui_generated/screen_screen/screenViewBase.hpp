@@ -9,10 +9,9 @@
 #include <gui/screen_screen/screenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/containers/progress_indicators/BoxProgress.hpp>
 #include <touchgfx/mixins/Draggable.hpp>
 #include <touchgfx/EasingEquations.hpp>
-#include <touchgfx/mixins/FadeAnimator.hpp>
+#include <touchgfx/mixins/MoveAnimator.hpp>
 
 class screenViewBase : public touchgfx::View<screenPresenter>
 {
@@ -21,6 +20,7 @@ public:
     virtual ~screenViewBase() {}
     virtual void setupScreen();
     virtual void handleTickEvent();
+    virtual void handleKeyEvent(uint8_t key);
     virtual void afterTransition();
 
 protected:
@@ -32,8 +32,8 @@ protected:
      * Member Declarations
      */
     touchgfx::Box boxBG;
-    touchgfx::Draggable< touchgfx::FadeAnimator< touchgfx::TextArea > > textAreaHelloWorld;
-    touchgfx::BoxProgress boxProgress1;
+    touchgfx::Draggable< touchgfx::MoveAnimator< touchgfx::TextArea > > textAreaHelloWorld;
+    touchgfx::Draggable< touchgfx::MoveAnimator< touchgfx::TextArea > > textArea1;
 
 private:
 
@@ -42,16 +42,6 @@ private:
      */
     static const uint16_t INTERACTION1_DURATION = 30;
     uint16_t interaction1Counter;
-    /*
-     * Interaction Callback Declarations
-     */
-    touchgfx::Callback < screenViewBase, const touchgfx::FadeAnimator<touchgfx::TextArea>& >  interaction2EndedCallback;
-
-
-    /*
-     * Interaction Handlers
-     */
-    void interaction2EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::TextArea>& comp);
 
 };
 

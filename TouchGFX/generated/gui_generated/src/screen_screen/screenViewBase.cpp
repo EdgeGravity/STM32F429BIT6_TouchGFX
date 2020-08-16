@@ -4,32 +4,27 @@
 #include <gui_generated/screen_screen/screenViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include "BitmapDatabase.hpp"
 
 screenViewBase::screenViewBase() :
-    interaction1Counter(0),
-    interaction2EndedCallback(this, &screenViewBase::interaction2EndedCallbackHandler)
+    interaction1Counter(0)
 {
 
     boxBG.setPosition(0, 0, 800, 480);
     boxBG.setColor(touchgfx::Color::getColorFrom24BitRGB(26, 164, 189));
 
-    textAreaHelloWorld.setXY(149, 216);
+    textAreaHelloWorld.setXY(0, -49);
     textAreaHelloWorld.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     textAreaHelloWorld.setLinespacing(0);
     textAreaHelloWorld.setTypedText(touchgfx::TypedText(T_SINGLEUSEID2));
 
-    boxProgress1.setXY(198, 314);
-    boxProgress1.setProgressIndicatorPosition(2, 2, 400, 30);
-    boxProgress1.setRange(0, 100);
-    boxProgress1.setDirection(touchgfx::AbstractDirectionProgress::RIGHT);
-    boxProgress1.setBackground(touchgfx::Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_BG_LARGE_PROGRESS_INDICATOR_BG_SQUARE_0_DEGREES_ID));
-    boxProgress1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 151, 255));
-    boxProgress1.setValue(30);
+    textArea1.setXY(535, -74);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(207, 207, 207));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID4));
 
     add(boxBG);
     add(textAreaHelloWorld);
-    add(boxProgress1);
+    add(textArea1);
 }
 
 void screenViewBase::setupScreen()
@@ -46,12 +41,29 @@ void screenViewBase::handleTickEvent()
         if(interaction1Counter == 0)
         {
             //Interaction2
-            //When Interaction1 completed fade textAreaHelloWorld
-            //Fade textAreaHelloWorld to alpha:100 with LinearInOut easing in 1000 ms (60 Ticks)
-            textAreaHelloWorld.clearFadeAnimationEndedAction();
-            textAreaHelloWorld.startFadeAnimation(100, 60, touchgfx::EasingEquations::linearEaseInOut);
-            textAreaHelloWorld.setFadeAnimationEndedAction(interaction2EndedCallback);
+            //When Interaction1 completed move textAreaHelloWorld
+            //Move textAreaHelloWorld to x:150, y:210 with BounceInOut easing in 2000 ms (120 Ticks)
+            textAreaHelloWorld.clearMoveAnimationEndedAction();
+            textAreaHelloWorld.startMoveAnimation(150, 210, 120, touchgfx::EasingEquations::bounceEaseInOut, touchgfx::EasingEquations::bounceEaseInOut);
+
+            //Interaction3
+            //When Interaction1 completed move textArea1
+            //Move textArea1 to x:190, y:110 with ElasticOut easing in 4000 ms (240 Ticks)
+            textArea1.clearMoveAnimationEndedAction();
+            textArea1.startMoveAnimation(190, 110, 240, touchgfx::EasingEquations::elasticEaseOut, touchgfx::EasingEquations::elasticEaseOut);
         }
+    }
+}
+
+//Handles when a key is pressed
+void screenViewBase::handleKeyEvent(uint8_t key)
+{
+    if(1 == key)
+    {
+        //Interaction4
+        //When hardware button 1 clicked change screen to Screen1
+        //Go to Screen1 with screen transition towards East
+        application().gotoScreen1ScreenSlideTransitionEast();
     }
 }
 
@@ -62,12 +74,4 @@ void screenViewBase::afterTransition()
     //When screen is entered delay
     //Delay for 500 ms (30 Ticks)
     interaction1Counter = INTERACTION1_DURATION;
-}
-
-void screenViewBase::interaction2EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::TextArea>& comp)
-{
-    //Interaction3
-    //When Interaction2 completed change screen to screen
-    //Go to screen with screen transition towards East
-    application().gotoscreenScreenSlideTransitionEast();
 }

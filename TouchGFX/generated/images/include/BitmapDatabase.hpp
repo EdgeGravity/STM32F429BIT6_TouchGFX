@@ -6,7 +6,12 @@
 #include <touchgfx/hal/Types.hpp>
 #include <touchgfx/Bitmap.hpp>
 
-const uint16_t BITMAP_BLUE_PROGRESSINDICATORS_BG_LARGE_PROGRESS_INDICATOR_BG_SQUARE_0_DEGREES_ID = 0;
+const uint16_t BITMAP_BLUE_BACKGROUNDS_MAIN_BG_TEXTURE_800X480PX_ID = 0;
+const uint16_t BITMAP_BLUE_BUTTONS_ROUND_SMALL_ID = 1;
+const uint16_t BITMAP_BLUE_BUTTONS_ROUND_SMALL_PRESSED_ID = 2;
+const uint16_t BITMAP_CHERRYMX_ID = 3;
+const uint16_t BITMAP_CHIPHELL_ID = 4;
+const uint16_t BITMAP_ICON_ID = 5;
 
 namespace BitmapDatabase
 {

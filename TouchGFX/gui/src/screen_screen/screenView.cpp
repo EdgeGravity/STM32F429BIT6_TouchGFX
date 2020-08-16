@@ -2,7 +2,7 @@
 
 screenView::screenView()
 {
-
+    screenViewBase::handleKeyEvent(1);
 }
 
 void screenView::setupScreen()

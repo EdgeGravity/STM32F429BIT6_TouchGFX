@@ -34,10 +34,10 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "textAreaHelloWorld",
-            "X": 149,
-            "Y": 216,
-            "Width": 502,
-            "Height": 49,
+            "X": 0,
+            "Y": -49,
+            "Width": 463,
+            "Height": 51,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": true,
@@ -46,32 +46,24 @@
             "Moveable": false
           },
           {
+            "TextId": "SingleUseId4",
+            "TextRotation": "0",
             "Color": {
-              "Red": 0,
-              "Green": 151,
-              "Blue": 255
+              "Red": 207,
+              "Green": 207,
+              "Blue": 207
             },
-            "Direction": "Right",
             "Alpha": 255,
-            "Style": "Style5",
-            "FileNameBackground": "__designer\\Blue_ProgressIndicators_bg_large_progress_indicator_bg_square_0_degrees.png",
-            "IndicatorPositionX": 2,
-            "IndicatorPositionY": 2,
-            "IndicatorPositionWidth": 400,
-            "IndicatorPositionHeight": 30,
-            "ProgressRangeMin": 0,
-            "ProgressRangeMax": 100,
-            "ProgressRangeSteps": 0,
-            "ProgressRangeStepsMin": 0,
-            "ProgressInitialValue": 30,
-            "Name": "boxProgress1",
-            "X": 198,
-            "Y": 314,
-            "Width": 404,
-            "Height": 34,
-            "Type": "BoxProgress",
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 535,
+            "Y": -74,
+            "Width": 421,
+            "Height": 51,
+            "Type": "TextArea",
             "Visible": true,
-            "Draggable": false,
+            "Draggable": true,
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
@@ -91,36 +83,276 @@
           },
           {
             "InteractionName": "Interaction2",
-            "HasCompletedTrigger": true,
+            "HasCompletedTrigger": false,
             "Trigger": {
               "InteractionToTriggerOn": "Interaction1",
               "Type": "TriggerInteractionCompleted"
             },
             "Action": {
-              "Alpha": 100,
-              "Easing": "Linear",
+              "X": 150,
+              "Y": 210,
+              "Easing": "Bounce",
               "EasingOption": "InOut",
-              "Duration": 1000,
+              "Duration": 2000,
               "ActionComponent": "textAreaHelloWorld",
-              "Type": "ActionFade"
+              "Type": "ActionMove"
             }
           },
           {
             "InteractionName": "Interaction3",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "InteractionToTriggerOn": "Interaction2",
+              "InteractionToTriggerOn": "Interaction1",
               "Type": "TriggerInteractionCompleted"
+            },
+            "Action": {
+              "X": 190,
+              "Y": 110,
+              "Easing": "Elastic",
+              "EasingOption": "Out",
+              "Duration": 4000,
+              "ActionComponent": "textArea1",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "ButtonKey": 1,
+              "Type": "TriggerPhysicalButtonClicked"
             },
             "Action": {
               "ScreenTransitionType": "ScreenTransitionSlide",
               "ScreenTransitionDirection": "East",
-              "ActionComponent": "screen",
+              "ActionComponent": "Screen1",
               "Type": "ActionGotoScreen"
             }
           }
         ],
         "Name": "screen",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "RelativeFilename": "__designer\\Blue_Backgrounds_Main_bg_texture_800x480px.png",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": 0,
+            "Y": 0,
+            "Width": 800,
+            "Height": 480,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon.png",
+            "Alpha": 255,
+            "Name": "image2",
+            "X": 35,
+            "Y": 43,
+            "Width": 365,
+            "Height": 394,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "CherryMX.png",
+            "Alpha": 255,
+            "Name": "image3",
+            "X": 460,
+            "Y": 121,
+            "Width": 130,
+            "Height": 28,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "chiphell.png",
+            "Alpha": 255,
+            "Name": "image4",
+            "X": 443,
+            "Y": 192,
+            "Width": 82,
+            "Height": 96,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\Blue_Buttons_Round_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_small.png",
+            "Alpha": 255,
+            "Style": "Style8",
+            "Name": "button1",
+            "X": 630,
+            "Y": -60,
+            "Width": 170,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId5",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 20,
+            "Y": 15,
+            "Width": 760,
+            "Height": 56,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea2",
+            "X": 303,
+            "Y": 83,
+            "Width": 477,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId7",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea3",
+            "X": 609,
+            "Y": 123,
+            "Width": 171,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId8",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 57,
+              "Green": 126,
+              "Blue": 196
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea4",
+            "X": 134,
+            "Y": 445,
+            "Width": 533,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "X": 562,
+              "Y": 210,
+              "Easing": "Bounce",
+              "EasingOption": "InOut",
+              "Duration": 5000,
+              "ActionComponent": "button1",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "button1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "screen",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "InteractionToTriggerOn": "Interaction1",
+              "Type": "TriggerInteractionCompleted"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "screen",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "Screen1",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0
       }
@@ -129,6 +361,26 @@
     "TextEntries": [
       {
         "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId4",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId5",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId6",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId7",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId8",
         "IsResource": false
       }
     ],

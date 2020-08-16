@@ -17,8 +17,18 @@
 #include <TouchGFXHAL.hpp>
 
 /* USER CODE BEGIN TouchGFXHAL.cpp */
-
+#include "main.h"
 #include "stm32f4xx.h"
+
+#define LCD_SIZE_X              800U
+#define LCD_SIZE_Y              480U
+#define LCD_PIXEL_BIT_DEPTH     16U
+#define LCD_PIXEL_BYTES         (LCD_PIXEL_BIT_DEPTH / 8U)
+#define LCD_VRAM_SIZE           ((LCD_SIZE_X * LCD_SIZE_Y) * LCD_PIXEL_BYTES)
+
+#define FRAME_BUFFER_ADDR_1     (SDRAM_BANK_ADDR)
+#define FRAME_BUFFER_ADDR_2     (SDRAM_BANK_ADDR + LCD_VRAM_SIZE)
+#define FRAME_BUFFER_ADDR_3     (SDRAM_BANK_ADDR + LCD_VRAM_SIZE * 2)
 
 using namespace touchgfx;
 
@@ -30,9 +40,18 @@ void TouchGFXHAL::initialize()
     // and implemented needed functionality here.
     // Please note, HAL::initialize() must be called to initialize the framework.
 
-    TouchGFXGeneratedHAL::initialize();
-//    setFrameBufferStartAddresses((void*)0xC0000000, (void*)0, (void*)0xC00BB800);
-    setFrameBufferStartAddresses((void*)0xC0000000, (void*)0xC00BB800, (void*)0xC0177000);
+//    TouchGFXGeneratedHAL::initialize();
+
+    HAL::initialize();
+    registerEventListener(*(Application::getInstance()));
+
+#if 0
+    /* 单缓冲与页面切换动效 */
+    setFrameBufferStartAddresses((void*)FRAME_BUFFER_ADDR_1, (void*)0, (void*)FRAME_BUFFER_ADDR_2);
+#else
+    /* 双缓冲与页面切换动效 */
+    setFrameBufferStartAddresses((void*)FRAME_BUFFER_ADDR_1, (void*)FRAME_BUFFER_ADDR_2, (void*)FRAME_BUFFER_ADDR_3);
+#endif
 }
 
 /**

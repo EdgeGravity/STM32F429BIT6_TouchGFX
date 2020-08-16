@@ -71,8 +71,15 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define SDRAM_BANK_ADDR 0xC0000000UL
+#define KEY_S1_Pin LL_GPIO_PIN_8
+#define KEY_S1_GPIO_Port GPIOI
+#define KEY_S2_Pin LL_GPIO_PIN_13
+#define KEY_S2_GPIO_Port GPIOC
 #define BL_PWM_Pin LL_GPIO_PIN_0
 #define BL_PWM_GPIO_Port GPIOA
+#define KEY_S3_Pin LL_GPIO_PIN_4
+#define KEY_S3_GPIO_Port GPIOH
 #define TP_INT_Pin LL_GPIO_PIN_7
 #define TP_INT_GPIO_Port GPIOH
 #define SWD_Pin LL_GPIO_PIN_13

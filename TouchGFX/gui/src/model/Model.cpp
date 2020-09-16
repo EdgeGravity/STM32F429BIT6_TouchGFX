@@ -7,9 +7,7 @@ extern osMessageQueueId_t GUI_MsgQHandle;
 
 Model::Model() : modelListener(0)
 {
-    if (KEY_Scan(KEY_S3) == KEY_ON) {
 
-    }
 }
 
 void Model::tick()

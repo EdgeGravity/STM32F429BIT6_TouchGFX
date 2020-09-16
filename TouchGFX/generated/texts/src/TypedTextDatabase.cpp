@@ -8,46 +8,72 @@
 extern touchgfx::GeneratedFont& getFont_verdana_20_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdana_40_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdana_10_4bpp();
-extern touchgfx::GeneratedFont& getFont_HARLOWSI_TTF_40_4bpp();
-extern touchgfx::GeneratedFont& getFont_STXIHEI_TTF_40_4bpp();
+extern touchgfx::GeneratedFont& getFont_Bender_otf_46_4bpp();
+extern touchgfx::GeneratedFont& getFont_Bender_otf_34_4bpp();
+extern touchgfx::GeneratedFont& getFont_cour_14_4bpp();
+extern touchgfx::GeneratedFont& getFont_ApexLogo_SocialNetwork_64_4bpp();
+extern touchgfx::GeneratedFont& getFont_ApexLogo_GUI_32_4bpp();
+extern touchgfx::GeneratedFont& getFont_ApexLogo_Battery_32_4bpp();
+extern touchgfx::GeneratedFont& getFont_ApexLogo_64_4bpp();
+extern touchgfx::GeneratedFont& getFont_Roboto_Regular_24_4bpp();
+extern touchgfx::GeneratedFont& getFont_Bender_otf_24_4bpp();
+extern touchgfx::GeneratedFont& getFont_Roboto_Thin_100_4bpp();
+extern touchgfx::GeneratedFont& getFont_Roboto_Regular_14_4bpp();
 
 const touchgfx::Font* touchgfx_fonts[] =
 {
     &(getFont_verdana_20_4bpp()),
     &(getFont_verdana_40_4bpp()),
     &(getFont_verdana_10_4bpp()),
-    &(getFont_HARLOWSI_TTF_40_4bpp()),
-    &(getFont_STXIHEI_TTF_40_4bpp())
+    &(getFont_Bender_otf_46_4bpp()),
+    &(getFont_Bender_otf_34_4bpp()),
+    &(getFont_cour_14_4bpp()),
+    &(getFont_ApexLogo_SocialNetwork_64_4bpp()),
+    &(getFont_ApexLogo_GUI_32_4bpp()),
+    &(getFont_ApexLogo_Battery_32_4bpp()),
+    &(getFont_ApexLogo_64_4bpp()),
+    &(getFont_Roboto_Regular_24_4bpp()),
+    &(getFont_Bender_otf_24_4bpp()),
+    &(getFont_Roboto_Thin_100_4bpp()),
+    &(getFont_Roboto_Regular_14_4bpp())
 };
 
 extern const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[];
 extern const touchgfx::TypedText::TypedTextData* const typedTextDatabaseArray[];
 
 TEXT_LOCATION_FLASH_PRAGMA
-const touchgfx::TypedText::TypedTextData typedText_database_Gb[] TEXT_LOCATION_FLASH_ATTRIBUTE =
-{
-    { 3, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
-    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR }
-};
-TEXT_LOCATION_FLASH_PRAGMA
 const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCATION_FLASH_ATTRIBUTE =
 {
-    { 3, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
-    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 8, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 7, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 13, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 13, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR }
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 6, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 9, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 6, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 6, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 11, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 4, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
+    { 12, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 11, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 11, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 11, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 11, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 11, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 4, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
+    { 4, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
+    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR }
 };
 
 TEXT_LOCATION_FLASH_PRAGMA
 const touchgfx::TypedText::TypedTextData* const typedTextDatabaseArray[] TEXT_LOCATION_FLASH_ATTRIBUTE =
 {
-    typedText_database_Gb
+    typedText_database_DEFAULT
 };
 
 namespace TypedTextDatabase
@@ -88,10 +114,37 @@ void resetFont(touchgfx::FontId fontId)
         touchgfx_fonts[2] = &(getFont_verdana_10_4bpp());
         break;
     case 3:
-        touchgfx_fonts[3] = &(getFont_HARLOWSI_TTF_40_4bpp());
+        touchgfx_fonts[3] = &(getFont_Bender_otf_46_4bpp());
         break;
     case 4:
-        touchgfx_fonts[4] = &(getFont_STXIHEI_TTF_40_4bpp());
+        touchgfx_fonts[4] = &(getFont_Bender_otf_34_4bpp());
+        break;
+    case 5:
+        touchgfx_fonts[5] = &(getFont_cour_14_4bpp());
+        break;
+    case 6:
+        touchgfx_fonts[6] = &(getFont_ApexLogo_SocialNetwork_64_4bpp());
+        break;
+    case 7:
+        touchgfx_fonts[7] = &(getFont_ApexLogo_GUI_32_4bpp());
+        break;
+    case 8:
+        touchgfx_fonts[8] = &(getFont_ApexLogo_Battery_32_4bpp());
+        break;
+    case 9:
+        touchgfx_fonts[9] = &(getFont_ApexLogo_64_4bpp());
+        break;
+    case 10:
+        touchgfx_fonts[10] = &(getFont_Roboto_Regular_24_4bpp());
+        break;
+    case 11:
+        touchgfx_fonts[11] = &(getFont_Bender_otf_24_4bpp());
+        break;
+    case 12:
+        touchgfx_fonts[12] = &(getFont_Roboto_Thin_100_4bpp());
+        break;
+    case 13:
+        touchgfx_fonts[13] = &(getFont_Roboto_Regular_14_4bpp());
         break;
     }
 }

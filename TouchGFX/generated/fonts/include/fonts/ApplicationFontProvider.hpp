@@ -11,18 +11,36 @@ struct Typography
     static const touchgfx::FontId DEFAULT = 0;
     static const touchgfx::FontId LARGE = 1;
     static const touchgfx::FontId SMALL = 2;
-    static const touchgfx::FontId TYPOGRAPHY_00 = 3;
-    static const touchgfx::FontId TYPOGRAPHY_01 = 4;
+    static const touchgfx::FontId BENDER_46PX = 3;
+    static const touchgfx::FontId BENDER_34PX = 4;
+    static const touchgfx::FontId COURIERNEW_14PX = 5;
+    static const touchgfx::FontId APEXLOGO_SOCIALNETWORK = 6;
+    static const touchgfx::FontId APEXLOGO_GUI = 7;
+    static const touchgfx::FontId APEXLOGO_BATTERY = 8;
+    static const touchgfx::FontId APEXLOGO = 9;
+    static const touchgfx::FontId ROBOTO_24PX = 10;
+    static const touchgfx::FontId BENDER_24PX = 11;
+    static const touchgfx::FontId ROBOTO_THIN_100PX = 12;
+    static const touchgfx::FontId ROBOTO_14PX = 13;
 };
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId DEFAULT = 0;       // verdana_20_4bpp
-    static const touchgfx::FontId LARGE = 1;         // verdana_40_4bpp
-    static const touchgfx::FontId SMALL = 2;         // verdana_10_4bpp
-    static const touchgfx::FontId TYPOGRAPHY_00 = 3; // HARLOWSI_TTF_40_4bpp
-    static const touchgfx::FontId TYPOGRAPHY_01 = 4; // STXIHEI_TTF_40_4bpp
-    static const uint16_t NUMBER_OF_FONTS = 5;
+    static const touchgfx::FontId DEFAULT = 0;                // verdana_20_4bpp
+    static const touchgfx::FontId LARGE = 1;                  // verdana_40_4bpp
+    static const touchgfx::FontId SMALL = 2;                  // verdana_10_4bpp
+    static const touchgfx::FontId BENDER_46PX = 3;            // Bender_otf_46_4bpp
+    static const touchgfx::FontId BENDER_34PX = 4;            // Bender_otf_34_4bpp
+    static const touchgfx::FontId COURIERNEW_14PX = 5;        // cour_14_4bpp
+    static const touchgfx::FontId APEXLOGO_SOCIALNETWORK = 6; // ApexLogo_SocialNetwork_64_4bpp
+    static const touchgfx::FontId APEXLOGO_GUI = 7;           // ApexLogo_GUI_32_4bpp
+    static const touchgfx::FontId APEXLOGO_BATTERY = 8;       // ApexLogo_Battery_32_4bpp
+    static const touchgfx::FontId APEXLOGO = 9;               // ApexLogo_64_4bpp
+    static const touchgfx::FontId ROBOTO_24PX = 10;            // Roboto_Regular_24_4bpp
+    static const touchgfx::FontId BENDER_24PX = 11;            // Bender_otf_24_4bpp
+    static const touchgfx::FontId ROBOTO_THIN_100PX = 12;      // Roboto_Thin_100_4bpp
+    static const touchgfx::FontId ROBOTO_14PX = 13;            // Roboto_Regular_14_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 14;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider

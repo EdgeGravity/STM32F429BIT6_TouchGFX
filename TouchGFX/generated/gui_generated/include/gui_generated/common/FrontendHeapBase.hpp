@@ -9,16 +9,14 @@
 #include <mvp/MVPHeap.hpp>
 #include <touchgfx/transitions/NoTransition.hpp>
 #include <touchgfx/transitions/SlideTransition.hpp>
-#include <touchgfx/transitions/CoverTransition.hpp>
-#include <touchgfx/transitions/SlideTransition.hpp>
 
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/screen_screen/screenView.hpp>
-#include <gui/screen_screen/screenPresenter.hpp>
-#include <gui/screen1_screen/Screen1View.hpp>
-#include <gui/screen1_screen/Screen1Presenter.hpp>
+#include <gui/screensplash_screen/screenSplashView.hpp>
+#include <gui/screensplash_screen/screenSplashPresenter.hpp>
+#include <gui/screensysinfo_screen/screenSysInfoView.hpp>
+#include <gui/screensysinfo_screen/screenSysInfoPresenter.hpp>
 
 
 /**
@@ -41,8 +39,8 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< screenView,
-            touchgfx::meta::TypeList< Screen1View,
+    typedef touchgfx::meta::TypeList< screenSplashView,
+            touchgfx::meta::TypeList< screenSysInfoView,
             touchgfx::meta::Nil >
             > GeneratedViewTypes;
 
@@ -55,8 +53,8 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< screenPresenter,
-            touchgfx::meta::TypeList< Screen1Presenter,
+    typedef touchgfx::meta::TypeList< screenSplashPresenter,
+            touchgfx::meta::TypeList< screenSysInfoPresenter,
             touchgfx::meta::Nil >
             > GeneratedPresenterTypes;
 
@@ -71,9 +69,7 @@ public:
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
             touchgfx::meta::TypeList< SlideTransition<EAST>,
-            touchgfx::meta::TypeList< CoverTransition<EAST>,
-            touchgfx::meta::TypeList< SlideTransition<WEST>,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::Nil >
             > GeneratedTransitionTypes;
 
     /**
@@ -83,7 +79,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoscreenScreenNoTransition();
+        app.gotoscreenSplashScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

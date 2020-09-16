@@ -4,13 +4,145 @@
       {
         "Components": [
           {
+            "FileName": "tic-tac-toe.png",
+            "Alpha": 255,
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "tiledImage_BG",
+            "X": 0,
+            "Y": 0,
+            "Width": 800,
+            "Height": 480,
+            "Type": "TiledImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId14",
+            "TextRotation": "0",
             "Color": {
-              "Red": 26,
-              "Green": 164,
-              "Blue": 189
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
             },
             "Alpha": 255,
-            "Name": "boxBG",
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textLogo3",
+            "X": 16,
+            "Y": 259,
+            "Width": 768,
+            "Height": 222,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 120,
+              "Blue": 215
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textLogo2",
+            "X": 0,
+            "Y": 259,
+            "Width": 800,
+            "Height": 111,
+            "Type": "TextArea",
+            "Visible": false,
+            "Draggable": true,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textLogo1",
+            "X": 16,
+            "Y": 148,
+            "Width": 768,
+            "Height": 111,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": true,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId10",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textLogo0",
+            "X": 16,
+            "Y": 0,
+            "Width": 768,
+            "Height": 148,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction_btn0_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "ButtonKey": 0,
+              "Type": "TriggerPhysicalButtonClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "screenSysInfo",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "screenSplash",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Color": {
+              "Red": 24,
+              "Green": 34,
+              "Blue": 41
+            },
+            "Alpha": 255,
+            "Name": "boxImage_BG",
             "X": 0,
             "Y": 0,
             "Width": 800,
@@ -23,128 +155,16 @@
             "Moveable": false
           },
           {
-            "TextId": "SingleUseId2",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
+            "FileName": "Grid_50px.png",
             "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Name": "textAreaHelloWorld",
-            "X": 0,
-            "Y": -49,
-            "Width": 463,
-            "Height": 51,
-            "Type": "TextArea",
-            "Visible": true,
-            "Draggable": true,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "TextId": "SingleUseId4",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 207,
-              "Green": 207,
-              "Blue": 207
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Name": "textArea1",
-            "X": 535,
-            "Y": -74,
-            "Width": 421,
-            "Height": 51,
-            "Type": "TextArea",
-            "Visible": true,
-            "Draggable": true,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Duration": 500,
-              "Type": "ActionDelay"
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "InteractionToTriggerOn": "Interaction1",
-              "Type": "TriggerInteractionCompleted"
-            },
-            "Action": {
-              "X": 150,
-              "Y": 210,
-              "Easing": "Bounce",
-              "EasingOption": "InOut",
-              "Duration": 2000,
-              "ActionComponent": "textAreaHelloWorld",
-              "Type": "ActionMove"
-            }
-          },
-          {
-            "InteractionName": "Interaction3",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "InteractionToTriggerOn": "Interaction1",
-              "Type": "TriggerInteractionCompleted"
-            },
-            "Action": {
-              "X": 190,
-              "Y": 110,
-              "Easing": "Elastic",
-              "EasingOption": "Out",
-              "Duration": 4000,
-              "ActionComponent": "textArea1",
-              "Type": "ActionMove"
-            }
-          },
-          {
-            "InteractionName": "Interaction4",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "ButtonKey": 1,
-              "Type": "TriggerPhysicalButtonClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionSlide",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "Screen1",
-              "Type": "ActionGotoScreen"
-            }
-          }
-        ],
-        "Name": "screen",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
-      },
-      {
-        "Components": [
-          {
-            "RelativeFilename": "__designer\\Blue_Backgrounds_Main_bg_texture_800x480px.png",
-            "Alpha": 255,
-            "Name": "image1",
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "tiledImage_Grid",
             "X": 0,
             "Y": 0,
             "Width": 800,
             "Height": 480,
-            "Type": "Image",
+            "Type": "TiledImage",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -152,14 +172,13 @@
             "Moveable": false
           },
           {
-            "RelativeFilename": "icon.png",
-            "Alpha": 255,
-            "Name": "image2",
-            "X": 35,
-            "Y": 43,
-            "Width": 365,
-            "Height": 394,
-            "Type": "Image",
+            "CustomContainerDefinitionName": "SensorContainer",
+            "Name": "sensorContainer_CPU",
+            "X": 20,
+            "Y": 160,
+            "Width": 437,
+            "Height": 410,
+            "Type": "CustomContainerInstance",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -167,68 +186,21 @@
             "Moveable": false
           },
           {
-            "RelativeFilename": "CherryMX.png",
-            "Alpha": 255,
-            "Name": "image3",
-            "X": 460,
-            "Y": 121,
-            "Width": 130,
-            "Height": 28,
-            "Type": "Image",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "RelativeFilename": "chiphell.png",
-            "Alpha": 255,
-            "Name": "image4",
-            "X": 443,
-            "Y": 192,
-            "Width": 82,
-            "Height": 96,
-            "Type": "Image",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Pressed": "__designer\\Blue_Buttons_Round_small_pressed.png",
-            "Released": "__designer\\Blue_Buttons_Round_small.png",
-            "Alpha": 255,
-            "Style": "Style8",
-            "Name": "button1",
-            "X": 630,
-            "Y": -60,
-            "Width": 170,
-            "Height": 60,
-            "Type": "Button",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "TextId": "SingleUseId5",
+            "TextId": "SingleUseId8",
             "TextRotation": "0",
             "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
+              "Red": 228,
+              "Green": 239,
+              "Blue": 237
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Name": "textArea1",
-            "X": 20,
-            "Y": 15,
-            "Width": 760,
-            "Height": 56,
+            "Name": "textCopyright",
+            "X": 481,
+            "Y": 462,
+            "Width": 317,
+            "Height": 17,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -240,18 +212,18 @@
             "TextId": "SingleUseId6",
             "TextRotation": "0",
             "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
+              "Red": 228,
+              "Green": 239,
+              "Blue": 237
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Name": "textArea2",
-            "X": 303,
-            "Y": 83,
-            "Width": 477,
-            "Height": 25,
+            "Name": "textProjectName",
+            "X": 502,
+            "Y": 439,
+            "Width": 296,
+            "Height": 17,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -260,21 +232,21 @@
             "Moveable": false
           },
           {
-            "TextId": "SingleUseId7",
+            "TextId": "SingleUseId16",
             "TextRotation": "0",
             "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
+              "Red": 248,
+              "Green": 114,
+              "Blue": 12
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Name": "textArea3",
-            "X": 609,
-            "Y": 123,
-            "Width": 171,
-            "Height": 25,
+            "Name": "textQuotes",
+            "X": 20,
+            "Y": 6,
+            "Width": 493,
+            "Height": 148,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -283,22 +255,175 @@
             "Moveable": false
           },
           {
-            "TextId": "SingleUseId8",
+            "TextId": "SingleUseId11",
             "TextRotation": "0",
             "Color": {
-              "Red": 57,
-              "Green": 126,
-              "Blue": 196
+              "Red": 228,
+              "Green": 239,
+              "Blue": 237
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Name": "textArea4",
-            "X": 134,
-            "Y": 445,
-            "Width": 533,
-            "Height": 25,
+            "Name": "textProductName",
+            "X": 244,
+            "Y": 17,
+            "Width": 218,
+            "Height": 16,
             "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId22",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 228,
+              "Green": 239,
+              "Blue": 237
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textSysInfoL",
+            "X": 20,
+            "Y": 17,
+            "Width": 442,
+            "Height": 121,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId13",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 8,
+              "Green": 238,
+              "Blue": 143
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 5,
+            "Name": "textSysInfoS",
+            "X": 20,
+            "Y": 20,
+            "Width": 310,
+            "Height": 57,
+            "Type": "TextArea",
+            "Visible": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Components": [
+              {
+                "TextId": "SingleUseId9",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 8,
+                  "Green": 238,
+                  "Blue": 143
+                },
+                "Alpha": 255,
+                "AutoSize": true,
+                "LineSpacing": 0,
+                "Name": "textMenu",
+                "X": 73,
+                "Y": 71,
+                "Width": 117,
+                "Height": 39,
+                "Type": "TextArea",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "RelativeFilename": "CherryMX.png",
+                "Alpha": 255,
+                "Name": "imageCherry",
+                "X": 204,
+                "Y": 76,
+                "Width": 130,
+                "Height": 28,
+                "Type": "Image",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "RelativeFilename": "chiphell.png",
+                "Alpha": 255,
+                "Name": "imageChiphell",
+                "X": 336,
+                "Y": 324,
+                "Width": 82,
+                "Height": 96,
+                "Type": "Image",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "TextId": "SingleUseId15",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
+                },
+                "Alpha": 255,
+                "AutoSize": true,
+                "LineSpacing": 0,
+                "Name": "textArea1",
+                "X": 55,
+                "Y": 346,
+                "Width": 64,
+                "Height": 74,
+                "Type": "TextArea",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "FileNameBackground": "tic-tac-toe.png",
+            "BackgroundX": 30,
+            "BackgroundY": 30,
+            "UseButton": false,
+            "FileNameButtonPressed": "",
+            "FileNameButtonReleased": "",
+            "ButtonX": 0,
+            "ButtonY": 0,
+            "State": "Collapsed",
+            "ExpandDirection": "West",
+            "Easing": "Cubic",
+            "EasingOption": "InOut",
+            "AnimationDuration": 1000,
+            "VisiblePixelsWhenCollapsed": 30,
+            "HiddenPixelsWhenExpanded": 0,
+            "ExpandedStateTimeout": 1000,
+            "Name": "slideMenu",
+            "X": 370,
+            "Y": 50,
+            "Width": 430,
+            "Height": 430,
+            "Type": "SlideMenu",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -308,56 +433,284 @@
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "Interaction_btn1_Clicked",
             "HasCompletedTrigger": true,
             "Trigger": {
-              "Type": "TriggerScreenEntered"
+              "ButtonKey": 1,
+              "Type": "TriggerPhysicalButtonClicked"
             },
             "Action": {
-              "X": 562,
-              "Y": 210,
-              "Easing": "Bounce",
-              "EasingOption": "InOut",
-              "Duration": 5000,
-              "ActionComponent": "button1",
-              "Type": "ActionMove"
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "button1",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionCover",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "screen",
-              "Type": "ActionGotoScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction3",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "InteractionToTriggerOn": "Interaction1",
-              "Type": "TriggerInteractionCompleted"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionSlide",
-              "ScreenTransitionDirection": "West",
-              "ActionComponent": "screen",
-              "Type": "ActionGotoScreen"
+              "State": "Expanded",
+              "ActionComponent": "slideMenu",
+              "Type": "ActionSetState"
             }
           }
         ],
-        "Name": "Screen1",
+        "Name": "screenSysInfo",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0
       }
     ],
-    "CustomContainerDefinitions": [],
+    "CustomContainerDefinitions": [
+      {
+        "Components": [
+          {
+            "TextId": "SingleUseId27",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 8,
+              "Green": 238,
+              "Blue": 143
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textUnitSymbol_1_1",
+            "X": 180,
+            "Y": 152,
+            "Width": 46,
+            "Height": 28,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId30",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 228,
+              "Green": 239,
+              "Blue": 237
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId32",
+              "UseBuffer": false,
+              "BufferSize": 0
+            },
+            "Name": "textArea2",
+            "X": 78,
+            "Y": 141,
+            "Width": 96,
+            "Height": 39,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId29",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 25,
+              "Green": 84,
+              "Blue": 83
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1_1_1",
+            "X": 0,
+            "Y": 152,
+            "Width": 68,
+            "Height": 28,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId24",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 8,
+              "Green": 238,
+              "Blue": 143
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textUnitSymbol_1",
+            "X": 180,
+            "Y": 106,
+            "Width": 22,
+            "Height": 28,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId31",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 228,
+              "Green": 239,
+              "Blue": 237
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId33",
+              "UseBuffer": false,
+              "BufferSize": 0
+            },
+            "Name": "textArea2_1",
+            "X": 78,
+            "Y": 96,
+            "Width": 96,
+            "Height": 39,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId26",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 25,
+              "Green": 84,
+              "Blue": 83
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1_1",
+            "X": 0,
+            "Y": 106,
+            "Width": 78,
+            "Height": 28,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId19",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 8,
+              "Green": 238,
+              "Blue": 143
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textUnitSymbol",
+            "X": 180,
+            "Y": 59,
+            "Width": 17,
+            "Height": 28,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "NumberOfDecimals": 0,
+            "TextId": "SingleUseId21",
+            "Color": {
+              "Red": 228,
+              "Green": 239,
+              "Blue": 237
+            },
+            "Alpha": 255,
+            "FileNameBackground": "",
+            "IndicatorPositionX": 0,
+            "IndicatorPositionY": 0,
+            "IndicatorPositionWidth": 62,
+            "IndicatorPositionHeight": 46,
+            "ProgressRangeMin": 0,
+            "ProgressRangeMax": 100,
+            "ProgressRangeSteps": 0,
+            "ProgressRangeStepsMin": 0,
+            "ProgressInitialValue": 27,
+            "Name": "textProgress",
+            "X": 112,
+            "Y": 50,
+            "Width": 62,
+            "Height": 46,
+            "Type": "TextProgress",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId23",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 25,
+              "Green": 84,
+              "Blue": 83
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 0,
+            "Y": 59,
+            "Width": 68,
+            "Height": 28,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId17",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 248,
+              "Green": 114,
+              "Blue": 12
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Name": "textSensorName",
+            "X": 0,
+            "Y": 0,
+            "Width": 62,
+            "Height": 46,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "SensorContainer",
+        "X": 0,
+        "Y": 0,
+        "Width": 437,
+        "Height": 410
+      }
+    ],
     "TextEntries": [
       {
         "TextEntryId": "SingleUseId2",
@@ -368,19 +721,91 @@
         "IsResource": false
       },
       {
-        "TextEntryId": "SingleUseId5",
-        "IsResource": false
-      },
-      {
         "TextEntryId": "SingleUseId6",
         "IsResource": false
       },
       {
-        "TextEntryId": "SingleUseId7",
+        "TextEntryId": "SingleUseId8",
         "IsResource": false
       },
       {
-        "TextEntryId": "SingleUseId8",
+        "TextEntryId": "SingleUseId9",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId11",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId13",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId10",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId14",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId15",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId16",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId17",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId19",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId21",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId22",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId23",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId24",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId26",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId27",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId29",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId30",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId31",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId32",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId33",
         "IsResource": false
       }
     ],
@@ -390,8 +815,8 @@
       "Height": 480
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen",
-    "SelectedStartupLanguage": "GB",
+    "StartupScreenName": "screenSplash",
+    "SelectedStartupLanguage": "EN",
     "Skin": "Blue",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
@@ -399,7 +824,8 @@
       16
     ],
     "AvailableLCDs": {
-      "16": "LCD16bpp"
+      "16": "LCD16bpp",
+      "24": "LCD24bpp"
     },
     "AvailableSections": [
       "ExtFlashSection",

@@ -104,6 +104,8 @@ void vTaskKEY(void *argument) {
 
         if (KEY_Scan(KEY_S2) == KEY_ON) {
             UART_PrintPrjInfo(pcWriteBuffer);
+            KeyVal = 0;
+            osMessageQueuePut(GUI_MsgQHandle, &KeyVal, 0, 0);
         }
 
         if (KEY_Scan(KEY_S3) == KEY_ON) {

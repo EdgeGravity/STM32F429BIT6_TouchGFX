@@ -142,9 +142,6 @@
     <Filter Include="Source Files\generated\gui_generated">
       <UniqueIdentifier>DBA238BA-E935-581C-CDBA-E6941762115B</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\screen_screen">
-      <UniqueIdentifier>AD9C4A44-4CA3-070E-6C07-A3D8C52C3A1F</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\gui\model">
       <UniqueIdentifier>0C70A003-8B50-D98D-9FE8-6FA73295FD32</UniqueIdentifier>
     </Filter>
@@ -160,29 +157,47 @@
     <Filter Include="Source Files\gui\common">
       <UniqueIdentifier>F972A886-F4E0-27CC-1E37-38D86BC838FD</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen_screen">
-      <UniqueIdentifier>D74FD299-AD2C-6249-2113-5675FDB87C13</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen_screen">
-      <UniqueIdentifier>E4E3F2EC-0278-3702-3241-59DA7B1D781A</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\generated\gui_generated\common">
       <UniqueIdentifier>D6589EB8-6BD0-EB17-0774-E7F23D5569E5</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\generated\gui_generated\common">
       <UniqueIdentifier>DA6F8569-B4F1-359F-F756-30A8382F00F2</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen1_screen">
-      <UniqueIdentifier>E231A5DC-C06B-AEEF-7CFB-3540D66F7AC2</UniqueIdentifier>
+    <Filter Include="Header Files\gui\screensplash_screen">
+      <UniqueIdentifier>BB6A2015-9536-59E6-07DE-1D8168211A6D</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\screen1_screen">
-      <UniqueIdentifier>A894228E-5AD4-3835-1AD4-4846D45BB22D</UniqueIdentifier>
+    <Filter Include="Source Files\gui\screensplash_screen">
+      <UniqueIdentifier>213BE9E3-A7AD-B429-C390-004D78E15D11</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>4EC4FC8E-7882-A817-09DD-C08C23849153</UniqueIdentifier>
+    <Filter Include="Source Files\gui\screensysinfo_screen">
+      <UniqueIdentifier>FECF0BC7-9AA8-9647-9DBE-4E8FB298E130</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>8D3B03CA-541F-7073-C1BF-2C3597AE8C46</UniqueIdentifier>
+    <Filter Include="Header Files\gui\screensysinfo_screen">
+      <UniqueIdentifier>C1D93887-C7F4-F246-C87E-36F8961FE963</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screensysinfo_screen">
+      <UniqueIdentifier>F1E6A753-A194-D2DF-AB04-1BE0E59C4483</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screensysinfo_screen">
+      <UniqueIdentifier>4026A80A-7D36-5247-26CC-5410BF6C75E2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screensplash_screen">
+      <UniqueIdentifier>DAC35F85-0466-277E-1E80-DE6893C50CAA</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screensplash_screen">
+      <UniqueIdentifier>BB3CBF3F-5FFC-2F5B-CD91-C9458154BF07</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\containers">
+      <UniqueIdentifier>0F5BCEB4-8312-A283-D87B-1CD208D681D4</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\containers">
+      <UniqueIdentifier>265BCE05-BCF2-B468-9988-E53BE9780E3E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\containers">
+      <UniqueIdentifier>D58CACD7-BFB4-AE5F-27FA-DC64A468FA21</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\containers">
+      <UniqueIdentifier>743809C3-5A85-ABB6-BE99-C418AA7DBB11</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -213,23 +228,29 @@
     <ClCompile Include="..\..\gui\src\model\Model.cpp">
       <Filter>Source Files\gui\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenPresenter.cpp">
-      <Filter>Source Files\gui\screen_screen</Filter>
+    <ClCompile Include="..\..\gui\src\screensplash_screen\screenSplashPresenter.cpp">
+      <Filter>Source Files\gui\screensplash_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenView.cpp">
-      <Filter>Source Files\gui\screen_screen</Filter>
+    <ClCompile Include="..\..\gui\src\screensplash_screen\screenSplashView.cpp">
+      <Filter>Source Files\gui\screensplash_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen_screen\screenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\screensplash_screen\screenSplashViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screensplash_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1Presenter.cpp">
-      <Filter>Source Files\gui\screen1_screen</Filter>
+    <ClCompile Include="..\..\gui\src\screensysinfo_screen\screenSysInfoPresenter.cpp">
+      <Filter>Source Files\gui\screensysinfo_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1View.cpp">
-      <Filter>Source Files\gui\screen1_screen</Filter>
+    <ClCompile Include="..\..\gui\src\screensysinfo_screen\screenSysInfoView.cpp">
+      <Filter>Source Files\gui\screensysinfo_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen1_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\screensysinfo_screen\screenSysInfoViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screensysinfo_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\SensorContainer.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\SensorContainerBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -664,23 +685,32 @@
     <ClInclude Include="..\..\gui\include\gui\screen_screen\screenPresenter.hpp">
       <Filter>Header Files\gui\screen_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenView.hpp">
-      <Filter>Header Files\gui\screen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_screen\screenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
       <Filter>Header Files\generated\gui_generated\common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1Presenter.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\screensplash_screen\screenSplashPresenter.hpp">
+      <Filter>Header Files\gui\screensplash_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1View.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\screensplash_screen\screenSplashView.hpp">
+      <Filter>Header Files\gui\screensplash_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen1_screen</Filter>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screensplash_screen\screenSplashViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screensplash_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screensysinfo_screen\screenSysInfoPresenter.hpp">
+      <Filter>Header Files\gui\screensysinfo_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screensysinfo_screen\screenSysInfoView.hpp">
+      <Filter>Header Files\gui\screensysinfo_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screensysinfo_screen\screenSysInfoViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screensysinfo_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\SensorContainer.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\SensorContainerBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
